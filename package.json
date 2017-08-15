@@ -11,10 +11,9 @@
     "pack": "build --target dir",
     "dist": "npm run dist:win && npm run dist:macos && npm run dist:linux && npm run dist:win32",
     "dist-quick": "npm run dist:win && npm run dist:macos && npm run dist:linux",
-    "dist:win": "build --win --x64",
-    "dist:win32": "build --win --ia32",
-    "dist:macos": "build --macos",
-    "dist:linux": "build --linux deb tar.xz"
+    "dist:win": "build --win --ia32 --x64",
+    "dist:mac": "build --mac",
+    "dist:linux": "build --linux --ia32 --x64 --armv7l"
   },
   "repository": {
     "type": "git",
@@ -58,11 +57,15 @@
       "category": "finance"
     },
     "win": {
-      "iconUrl": "https://ark.io/i/mediakit/icon_1.png"
+      "target": "nsis"
     },
     "linux": {
-      "synopsis": "A Lite Client used to securely connect to the BPL network and manage your BPL assets.",
-      "description": ""
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm",
+        "tar.gz"
+      ]
     }
   }
 }

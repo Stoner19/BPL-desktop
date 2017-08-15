@@ -46,9 +46,38 @@ cd BPL-desktop
 npm install
 ```
 
-Then start:
-```bash
-npm start
+## Electron
+
+### Start
+
+Start the Electron client.
+
+```
+npm run start
+```
+
+### Windows
+
+Build package for Windows.
+
+```
+npm run dist:win
+```
+
+### Mac OS X
+
+Build package for Mac OS X.
+
+```
+npm run dist:mac
+```
+
+### Linux
+
+Build package for Linux.
+
+```
+npm run dist:linux
 ```
 
 ## Necessary to package from Mac OS X
