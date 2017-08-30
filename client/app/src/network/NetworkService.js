@@ -13,7 +13,7 @@
     var network=switchNetwork(storageService.getContext());
 
     var bpl = require('bpljs');
-    bpl.crypto.setNetworkVersion(network.version || 23);
+    bpl.crypto.setNetworkVersion(network.version || 25);
 
     var clientVersion = require('../../package.json').version;
 
@@ -79,36 +79,36 @@
       var n = storageService.getGlobal("networks");
       if(!n){
         n = {
-          mainnet:{ //so far same as testnet
-            nethash:'6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988',
-            peerseed:'http://5.39.10.240:4000',
+          mainnet:{
+            nethash:'7bfb2815effb43592ccdd4fd0f657c082a7b318eed12f6396cc174d8578293c3',
+            peerseed:'http://13.56.163.57:4001',
             forcepeer: false,
-            token: 'BTC',
-            symbol: 'B',
-            version: 0x17,
-            explorer: 'https://explorer.ark.io',
+            token: 'BLOCKPOOL',
+            symbol: 'β',
+            version: 0x19,
+            explorer: 'http://13.56.163.57:4002',
             exchanges: {
               changer: "bpl_BPL"
             },
             background:"url(assets/images/blockpool.jpg)"
           },
           testnet:{
-            nethash:'8eec6459a5928387d32b99c7ef22b1fcb26dfd8417fa4875f1d05fde18bb6484',
-            peerseed:'http://54.249.68.234:4000',
-            token: 'TESTBTC',
-            symbol: 'TBTC',
-            version: 0x82,
-            explorer: 'http://bpltestexp.cryptooz.com/delegateMonitor',
+            nethash:'f9b98b78d2012ba8fd75538e3569bbc071ce27f0f93414218bc34bc72bdeb3db',
+            peerseed:'http://52.66.184.223:4000',
+            token: 'TEST_BLOCKPOOL',
+            symbol: 'Tβ',
+            version: 0x19,
+            explorer: 'http://52.66.184.223:4010',
             background:"url(assets/images/blockpool.jpg)"
           },
-          bpldevnet:{
-            nethash:'1a418de02c68c4353d932a9568be28be20b7b9a86fcf9b653482b4f3f42a6302',
-            peerseed:'http://52.66.184.223:4000',
+          devnet:{
+            nethash:'022293302aa4c24a98f1007645afe2d8b98f34e2c6fbf367c78d0bd389c6264f',
+            peerseed:'http://34.253.216.124:4000',
             forcepeer: false,
-            token: 'BPL',
-            symbol: 'B',
+            token: 'DEV_BLOCKPOOL',
+            symbol: 'Dβ',
             version: 0x19,
-            explorer: 'http://52.66.184.223:4005',
+            explorer: 'http://54.199.172.202:4001',
             exchanges: {
               changer: "bpl_BPL"
             },
